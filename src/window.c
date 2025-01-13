@@ -31,6 +31,14 @@ window* new_window(int width, int height) {
   return out;
 }
 
+void free_window(window *win) {
+  for(int x = 0; x < win->height; y++) {
+    free(win->data[x]);
+  }
+  free(win->data);
+  free(win);
+}
+
 void print_window(window *win) {
   for(int y = 0; y < win->height; y++) {
     for(int x = 0; x < win->width; x++) {
