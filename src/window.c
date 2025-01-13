@@ -20,7 +20,7 @@ window* new_window(int width, int height) {
     }
 
     for(int c = 0; c < width; c++) {
-      data[i][c] = BLACK;
+      data[i][c] = RED;
     }
   }
 
@@ -31,8 +31,12 @@ window* new_window(int width, int height) {
   return out;
 }
 
+color read_pixel(window *win, int x, int y) {
+  return win->data[y][x];
+}
+
 void free_window(window *win) {
-  for(int x = 0; x < win->height; y++) {
+  for(int x = 0; x < win->height; x++) {
     free(win->data[x]);
   }
   free(win->data);
@@ -40,6 +44,7 @@ void free_window(window *win) {
 }
 
 void print_window(window *win) {
+  system("clear");
   for(int y = 0; y < win->height; y++) {
     for(int x = 0; x < win->width; x++) {
       printf("\033[%dm▒\033[0m", win->data[y][x]);

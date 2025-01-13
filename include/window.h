@@ -1,6 +1,8 @@
 #include<stdlib.h>
 
-// https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
+#ifndef WINDOW_H
+#define WINDOW_H
+
 typedef enum {
   BLACK   = 30,
   RED     = 31,
@@ -15,12 +17,19 @@ typedef enum {
 typedef struct {
   int width;
   int height;
-  color **data;
+  color **front;
+  color **back;
 } window;
 
 
 window* new_window(int height, int width);
 
-void free_window(window *win); // TODO:
+color read_pixel(window *win, int x, int y);
+
+void free_window(window *win);
 
 void print_window(window *win);
+
+void push_window_buffer(window *win) // TODO
+
+#endif
