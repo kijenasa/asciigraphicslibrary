@@ -11,6 +11,7 @@ int main(int argc, char *argv[]) {
   draw_rect(win, 1, 1, 10, 12, GREEN);
   draw_rect(win, 2, 2, 9, 11, BLACK);
   draw_line(win, 0, 0, 156, 34, WHITE);
+  push_window_buffer(win);
   print_window(win);
 
   free_window(win);

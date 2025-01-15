@@ -30,6 +30,6 @@ void free_window(window *win);
 
 void print_window(window *win);
 
-void push_window_buffer(window *win) // TODO
+void push_window_buffer(window *win); // TODO
 
 #endif

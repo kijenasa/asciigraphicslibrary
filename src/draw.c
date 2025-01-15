@@ -1,7 +1,7 @@
 #include "../include/draw.h"
 
 void draw_pixel(window *win, int x, int y, color c) {
-  win->data[y][x] = c;
+  win->back[y][x] = c;
 }
 
 void draw_rect(window *win, int x1, int y1, int x2, int y2, color c) {
