@@ -1,6 +1,6 @@
 A terrible C library for making "graphical" applications using the U+2580-259F character (▒) and ANSI escape codes for color.
 
-It currently does'nt support input, but maybe one day...
+It currently doesn't support input, but maybe one day...
 
 # Building
 ```
