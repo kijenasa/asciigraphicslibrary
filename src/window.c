@@ -30,10 +30,6 @@ window* new_window(int width, int height) {
   }
 
   window *out = malloc(sizeof(window));
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 5c05e49 (make header for input and add int[] to window struct to hold input values)
   out->width = width;
   out->height = height;
   out->front = front;
