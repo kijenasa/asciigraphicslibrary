@@ -3,7 +3,6 @@ A terrible C library for making "graphical" applications using the U+2580-259F c
 It currently does'nt support input, but maybe one day...
 
 # Building
-Run
 ```
 make build
 make clean
@@ -13,6 +12,7 @@ This will produce a static library, `libagl.a`, which you can use.
 # Using
 ## Including
 Include AGL in your project.
+
 Say this is your project's structure:
 ```
 .
@@ -38,9 +38,12 @@ A working `main.c` could look like this:
 
 int main(int argc, char *argv[]) {
   window* win = new_window(10,10);
+
   draw_pixel(win, 1,1, RED);
+
   push_window_buffer(win);
   print_window(win);
+
   free_window(win);
   return EXIT_SUCCESS;
 }
