@@ -32,22 +32,10 @@ window* new_window(int width, int height) {
 
   window *out = malloc(sizeof(window));
 
-  int *input = malloc(sizeof(int) * 4);
-
-  if(input == NULL) {
-    puts("Failed to allocate memory");
-    return NULL;
-  }
-
-  for(int i = 0; i < INPUT_COUNT; i++) {
-    input[i] = 0;
-  }
-
   out->width = width;
   out->height = height;
   out->front = front;
   out->back = back;
-  out->input = input;
   return out;
 }
 
@@ -60,7 +48,6 @@ void free_window(window *win) {
     free(win->front[x]);
   }
   free(win->front);
-  free(win->input);
   free(win);
 }
 

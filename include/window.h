@@ -19,7 +19,6 @@ typedef struct {
   int height;
   color **front;
   color **back;
-  int *input;
 } window;
 
 

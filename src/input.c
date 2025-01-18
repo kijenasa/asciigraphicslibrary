@@ -1,5 +1,4 @@
 #include "../include/input.h"
 
-void update_input(window *win) {
-  return;
+char get_char_input() {
 }
