@@ -1,6 +1,4 @@
-A terrible C library for making "graphical" applications using the U+2580-259F character (▒) and ANSI escape codes for color.
-
-It currently doesn't support input, but maybe one day...
+A C library for making psuedo-graphical progams for terminals using the U+2580-259F character (▒) and ANSI escape codes for color.
 
 ![example image](https://cloud-75opc1bi6-hack-club-bot.vercel.app/0screenshot_20250117_205547.png)
 
